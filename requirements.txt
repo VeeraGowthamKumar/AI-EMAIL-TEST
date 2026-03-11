@@ -1,0 +1,72 @@
+# AI Email Classification & Auto-Reply System
+
+## Developer Details
+- **Full Name:** [Your Full Name]
+- **Email ID:** [Your Email ID]
+- **College Name:** [Your College Name]
+- **Selected Skill Track:** AI & Machine Learning
+
+---
+
+## 🌟 Project Overview
+The **AI Email Classification & Auto-Reply System** is an intelligent triage tool designed to solve the problem of "inbox overload." By using Natural Language Processing (NLP) and rule-based AI, it automatically analyzes the intent and urgency of incoming emails, categorizes them, and suggests a professional response instantly.
+
+### 🎯 Why Use This System?
+- **⚡ Instant Triage:** Automatically identifies critical "Support" issues so they don't get lost.
+- **🕒 Efficiency:** Saves hours of manual sorting for customer service and sales teams.
+- **✅ Consistency:** Applies the same professional logic to every email, reducing human error.
+- **📈 Scalability:** Helps growing businesses handle high email volumes without increasing headcount.
+
+## 📊 System Workflow
+![System Workflow Diagram](workflow_diagram.png)
+
+```mermaid
+graph TD
+    A[Incoming Email Text] -.-> B[Text Preprocessing]
+    B -.-> C{AI Classification Engine}
+    C -.->|Keyword Matching| D[Category Detection]
+    D -.-> E[Priority Logic]
+    E -.-> F[Reply Generation]
+    F -.-> G[Final Result]
+```
+
+## 🛠️ How It Works
+1. **Preprocessing:** The system cleans the input by removing punctuation and converting text to lowercase to ensure consistency.
+2. **Category Classification:** The AI scans for specific "trigger phrases" (e.g., "not arrived" triggers Support, "price" triggers Sales).
+3. **Urgency Detection:** It evaluates the combination of keywords and categories to assign a Priority (e.g., any "Support" message is flagged as High Priority).
+4. **Smart Reply:** A tailored response template is selected based on the final classification.
+
+## Technologies Used
+- **Python 3.x**
+- **Regex** (for text cleaning)
+- **Scikit-learn / NLTK** (listed in requirements for extensibility)
+
+## How to Run
+1. Ensure you have Python installed.
+2. (Optional) Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the main script:
+   ```bash
+   python main.py
+   ```
+4. Enter the email text when prompted. Type `exit` to quit.
+
+## Example Input / Output
+
+**Input Email:**
+`Hello, my order has not arrived yet and I need help.`
+
+**AI Analysis Result:**
+- **Category:** Support
+- **Priority:** High
+- **Suggested Reply:** Thank you for reaching out. Our support team has received your request and will assist you shortly.
+
+---
+
+## API Endpoints (If implemented as API)
+*Note: This version is a CLI-based prototype as per Python track requirements.*
+
+- `classifier.py`: Contains the `EmailClassifier` class and NLP logic.
+- `main.py`: Handles the user interface and program flow.
